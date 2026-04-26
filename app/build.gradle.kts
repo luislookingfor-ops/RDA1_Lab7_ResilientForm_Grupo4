@@ -5,13 +5,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.formularioregistro"
+    namespace = "com.example.reviewresilence"
     compileSdk = 36
-    // Ajustado a la versión estable soportada por tu plugin [cite: 10]
+
 
     defaultConfig {
-        applicationId = "com.example.formularioregistro"
-        // CORRECCIÓN: El laboratorio pide API 21 o superior
+        applicationId = "com.example.reviewresilence"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -42,30 +41,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
-    implementation("androidx.activity:activity-compose:1.9.1")
 
-    // Compose BOM
-    implementation(platform("androidx.compose:compose-bom:2024.06.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-
-    // ViewModel Compose (para viewModel() en Composable)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
-
-    // LiveData (para observeAsState)
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
-
-    // DataStore
-    implementation("androidx.datastore:datastore-preferences:1.1.1")
-
-    // Activity KTX (SavedStateHandle)
-    implementation("androidx.activity:activity-ktx:1.9.1")
-
-    // Corrutinas
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
-    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.activity.ktx)
 }
